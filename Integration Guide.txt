@@ -1,0 +1,29 @@
+This note guides Android developers on how to integrate an existing Android app with Fortuma billing SDKs.
+It uses Agile development method and consists of 4 related projects
+
+
+1. Clock without billing 
+Develop a simple android app called Watch. It has following features
+- When it start, it displays current local time in Black font
+- User can press the UPGRADE button to upgrade the application to "Full license" version. then the current local time in Red font and the UPGRADE button disappears 
+- User can sart/stop a second counter by clicking one button called "Turn On the Stop Watch" / "Turn Off the Stop Watch"
+
+2. Clock with Fortumo billing
+Add Fortuma operator billing to the application created in Part 1. 
+
+Application Name: Clock
+Service Name "Clock_Pro_Op" is priced at $2USD.  When users Press UPGRADE, this billing product is used.
+The consumable billing product "Clock_Stopwatch_Op" is priced at USD$2 = 200 Points. Each time users Turn On the Stop Watch, it costs 1 Point. 
+
+3. Clock with NOOK billing
+Add Nook credit billing to the application created in Part 1. 
+ 
+Application Name: Clock
+Service Name "Clock_Pro_credit" is priced at $2USD.  When users Press UPGRADE, this billing product is used.
+The consumable billing product "Clock_Stopwatch_credit" is priced at USD$2 = 200 Points. Each time users Turn On the Stop Watch, it costs 1 Point. 
+
+
+4. Clock with Fortumo and Nook billing
+Integration two billings methods into Clock			
+
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.clock.nook"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="17" />
+        
+    <!-- Permissions -->
+	<uses-permission android:name="android.permission.INTERNET">
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+	    
+	    
+	<permission
+        android:name="com.clock.nook.PAYMENT_INFO_BROADCAST_PERMISSION"
+        android:label="Read Fortumo payment status"
+        android:protectionLevel="signature"/>  
+   <uses-permission android:name="com.clock.nook.PAYMENT_INFO_BROADCAST_PERMISSION"/>
+	
+   	    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name">
+        
+        
+       <service android:name="com.fortumo.android.FortumoService"/>
+       <service android:name="com.fortumo.android.StatusUpdateService"/>
+       
+       <activity
+           android:name="com.fortumo.android.FortumoActivity"
+             android:theme="@android:style/Theme.Translucent.NoTitleBar"
+             android:configChanges="orientation|keyboardHidden|screenSize"/>    
+        
+	   <receiver
+              android:name=".receivers.PaymentStatusReceiver"
+                android:permission="com.clock.nook.PAYMENT_INFO_BROADCAST_PERMISSION">
+           <intent-filter>
+              <action android:name="com.fortumo.android.PAYMENT_STATUS_CHANGED"/>
+           </intent-filter>
+       </receiver>        
+
+    </application>
+</manifest>

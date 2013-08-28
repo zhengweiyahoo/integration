@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent" >
+    
+<DigitalClock
+android:id="@+id/digitalClock1"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_centerVertical="true"
+android:textSize="15dp"
+android:text="DigitalClock" />
+
+
+
+<TextView
+android:id="@+id/textView1"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginTop="120dp"
+android:textSize="12dp"
+android:hint="Digital Clock: in trial version, timer text in Black. In standard version, timer text in Red. Click the timer text to standard version" />
+
+<TextView
+android:id="@+id/textView2"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:textSize="15dp"
+android:layout_below="@+id/digitalClock1"
+android:hint="" />
+
+<Button
+android:id="@+id/button1"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_weight="1"
+android:layout_below="@+id/button2"
+android:text="Upgrade to Full License" />
+
+<Button
+android:id="@+id/button2"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_weight="1"
+android:layout_alignParentLeft="true"
+android:text="Turn On the Stop Watch" />
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
